@@ -29,15 +29,18 @@ app.use(express.urlencoded({
 }));
 
 function findUser(email){
+  console.log('email', email)
+  console.log(db.data.users)
   const results = db.data.users.filter(u=>u.email === email)
-  if(results.length) return undefined;
+  if(results.length === 0) return undefined;
   return results[0];
 }
 
 // ENDPOINTS
 
-app.post("auth/login", (req, res)=>{
+app.post("/auth/login", (req, res)=>{
   const userFound = findUser(req.body.email)
+  console.log('user found', userFound)
   if(userFound){
     if(bcrypt.compareSync(req.body.password, userFound.password)){
       res.send({ok: true, name: userFound.name, email: userFound.email})
@@ -49,7 +52,7 @@ app.post("auth/login", (req, res)=>{
   }
 })
 
-app.post("auth/register", (req, res)=>{
+app.post("/auth/register", (req, res)=>{
   const salt = bcrypt.genSaltSync(10)
   const hashedPass = bcrypt.hashSync(req.body.password, salt)
 
