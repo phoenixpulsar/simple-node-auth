@@ -1,6 +1,8 @@
 const API = {
     endpoint: "/auth/",
-    // ADD HERE ALL THE OTHER API FUNCTIONS
+    login: async (user)=> {
+        return await API.makePostRequest(API.endpoint + "login", user)
+    },
     makePostRequest: async (url, data) => {
         const response = await fetch(url, {
             method: "POST",
