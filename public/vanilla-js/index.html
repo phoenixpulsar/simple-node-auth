@@ -54,14 +54,16 @@
             <h2>Register</h2>
             <form id="formRegister">
                 <fieldset>
+                    <label for="register_name">Your Name</label>
                     <input placeholder="You Name" id="register_name"
-                            required>
+                            required autocomplete="name">
+                    <label for="register_email">Your Email</label>
                     <input placeholder="Your email" id="register_email" 
-                            required type="email">
+                            required type="email" autocomplete="username">
                     
-                    <label>Your Password</label>
+                    <label for="register_password">Your Password</label>
                     <input type="password" id="register_password"
-                            required>
+                            required autocomplete="new-password">
                 </fieldset>
 
                 <button>Register Account</button>
@@ -73,11 +75,12 @@
 
             <form id="formLogin">
                 <fieldset>
+                    <label for="login_email">Your Email</label>
                     <input placeholder="email" id="login_email"
-                        required>      
+                        required autocomplete="username">      
                     <label for="login_password">Password</label>
                     <input type="password" id="login_password"
-                       >
+                       autocomplete="current-password">
                 </fieldset>
                 <button>Continue</button>
 
