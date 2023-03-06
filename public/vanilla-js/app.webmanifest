@@ -1,0 +1,12 @@
+{
+    "name": "Simple Node Auth App",
+    "short_name": "simpleauthapp",
+    "theme_color": "#43281C",
+    "display": "standalone",
+    "background_color": "#EFEFEF",
+    "start_url": "/",
+    "scope": "/",
+    "description": "Simple Node Auth App using different Frameworks",
+    "icons": [],
+    "screenshots": []
+}

@@ -1,3 +1,3 @@
-# Coffee Masters Authentication Demo
+# Authentication Demo
 
-This is the initial project for the FullStack Authentication workshop at Frontend Masters
+Auth demo, node v: v18.13.0

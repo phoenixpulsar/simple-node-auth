@@ -22,7 +22,7 @@ const protocol = "http";
 const port = 5050;
 const expectedOrigin = `${protocol}://${rpID}:${port}`;
 
-app.use(express.static('public'));
+app.use(express.static('public/vanilla-js'));
 app.use(express.json());
 app.use(express.urlencoded({
   extended: true
@@ -33,7 +33,7 @@ app.use(express.urlencoded({
 
 
 app.get("*", (req, res) => {
-    res.sendFile(__dirname + "public/index.html"); 
+    res.sendFile(__dirname + "public/vanilla-js/index.html"); 
 });
 
 app.listen(port, () => {
